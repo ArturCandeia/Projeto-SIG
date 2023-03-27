@@ -128,6 +128,12 @@ void tela_sobre(void) {
     printf("===             Developed by @ArturCandeia -- since Mar, 2023               ===\n");
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===             Este programa é uma gestão de clinicas com o intuito        ===\n");
+    printf("===             de facilitar o uso de dados de pacientes a melhorar         ===\n");
+    printf("===             o fluxo de dados em clinicas                                ===\n");
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
     printf("\n");
     printf("Aperte <ENTER> para");
     getchar();    
@@ -135,7 +141,7 @@ void tela_sobre(void) {
 
 void tela_equipe(void) {
     system("clear||cls");
-    printf("===============================================================================\n");
+    printf("===========================================================void tela_projeto(void);====================\n");
     printf("===                                                                         ===\n");
     printf("===            = = Sistema de de Gerenciamento Clinico = =                  ===\n");
     printf("===                                                                         ===\n");
@@ -150,3 +156,5 @@ void tela_equipe(void) {
     printf("Aperte <ENTER> para continuar");
     getchar();
 }
+
+
