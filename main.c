@@ -13,21 +13,101 @@ int main(void) {
 }
 
 void tela_inicial(void) {
+    system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===           = = Sistema de Gerenciamento Clinico = =                      ===\n");
     printf("===                                                                         ===\n");
     printf("===            1. Módulo Paciente                                           ===\n");
     printf("===            2. Módulo Fúncionarios                                       ===\n");
-    printf("===            3. Módulo                                                    ===\n");
-    printf("===            4. Módulo                                                    ===\n");
+    printf("===            3. Módulo Exames                                             ===\n");
     printf("===            0. Sair                                                      ===\n");
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_paciente(void) {
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = = Módulo paciente = =                              ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     1. Cadastrar Paciente                               ===\n");
+    printf("===                     2. Buscar Paciente                                  ===\n");
+    printf("===                     3. Editar Paciente                                  ===\n");
+    printf("===                     4. Excluir Paciente                                 ===\n");
+    printf("===                     0. Sair                                             ===\n");
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_paciente_cadastrar(void) {
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Cadastra paciente = =                           ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     Nome Completo:                                      ===\n");
+    printf("===                     CPF:                                                ===\n");
+    printf("===                     E-mail:                                             ===\n");
+    printf("===                     Número de contato:                                  ===\n");
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_paciente_buscar(void) {
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Busca paciente = =                              ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:                                               ===\n");
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_paciente_editar(void) {
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Editar paciente = =                             ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:                                               ===\n");
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_excluir_paciente(void) {
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Busca paciente = =                              ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:                                               ===\n");
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
 }
 
 void tela_sobre(void) {
+    system("clear||cls");
     printf("\n");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
@@ -39,9 +119,13 @@ void tela_sobre(void) {
     printf("===             Developed by @ArturCandeia -- since Mar, 2023               ===\n");
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para");
+    getchar();    
 }
 
 void tela_equipe(void) {
+    system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===            = = Sistema de de Gerenciamento Clinico = =                  ===\n");
@@ -54,4 +138,6 @@ void tela_equipe(void) {
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
 }
