@@ -141,7 +141,7 @@ void tela_sobre(void) {
 
 void tela_equipe(void) {
     system("clear||cls");
-    printf("===========================================================void tela_projeto(void);====================\n");
+    printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===            = = Sistema de de Gerenciamento Clinico = =                  ===\n");
     printf("===                                                                         ===\n");
