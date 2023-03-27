@@ -1,13 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void tela_inicial(void);
 void tela_sobre(void);
 void tela_equipe(void);
+void tela_paciente(void);
+void tela_paciente_cadastrar(void);
+void tela_paciente_buscar(void);
+void tela_paciente_editar(void);
+void tela_paciente_excluir(void);
 
 int main(void) {
   tela_inicial();
   tela_sobre();
   tela_equipe();
+  tela_paciente();
+  tela_paciente_cadastrar();
+  tela_paciente_buscar();
+  tela_paciente_editar();
+  tela_paciente_excluir();
   return 0;
 
 }
@@ -101,9 +112,7 @@ void tela_excluir_paciente(void) {
     printf("===                      CPF:                                               ===\n");
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
-    printf("\n");
-    printf("Aperte <ENTER> para continuar");
-    getchar();
+
 }
 
 void tela_sobre(void) {
