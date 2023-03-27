@@ -112,6 +112,9 @@ void tela_paciente_excluir(void) {
     printf("===                      CPF:                                               ===\n");
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
 
 }
 
