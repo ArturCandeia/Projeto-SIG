@@ -11,9 +11,9 @@ void tela_paciente_editar(void);
 void tela_paciente_excluir(void);
 
 int main(void) {
-  tela_inicial();
   tela_sobre();
   tela_equipe();
+  tela_inicial();
   tela_paciente();
   tela_paciente_cadastrar();
   tela_paciente_buscar();
