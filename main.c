@@ -107,7 +107,7 @@ void tela_paciente_excluir(void) {
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
-    printf("===                    = =  Busca paciente = =                              ===\n");
+    printf("===                    = =  Exclui paciente = =                             ===\n");
     printf("===                                                                         ===\n");
     printf("===                      CPF:                                               ===\n");
     printf("===                                                                         ===\n");
