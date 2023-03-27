@@ -103,7 +103,7 @@ void tela_paciente_editar(void) {
     getchar();
 }
 
-void tela_excluir_paciente(void) {
+void tela_paciente_excluir(void) {
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
