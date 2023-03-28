@@ -24,6 +24,7 @@ int main(void) {
 }
 
 void tela_inicial(void) {
+    char op;
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
@@ -34,6 +35,10 @@ void tela_inicial(void) {
     printf("===            3. Módulo Exames                                             ===\n");
     printf("===            0. Sair                                                      ===\n");
     printf("===                                                                         ===\n");
+    printf("===            Escolha uma opção:");
+    scanf("%c",&op);
+    getchar();
+    printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
     printf("Aperte <ENTER> para continuar");
@@ -41,6 +46,7 @@ void tela_inicial(void) {
 }
 
 void tela_paciente(void) {
+    char op;
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
@@ -52,6 +58,10 @@ void tela_paciente(void) {
     printf("===                     4. Excluir Paciente                                 ===\n");
     printf("===                     0. Sair                                             ===\n");
     printf("===                                                                         ===\n");
+    printf("===                     Escolha uma opção:");
+    scanf("%c",&op);
+    getchar();
+    printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
     printf("Aperte <ENTER> para continuar");
@@ -59,15 +69,28 @@ void tela_paciente(void) {
 }
 
 void tela_paciente_cadastrar(void) {
+    char nome[51];
+    char cpf[12];
+    char email[51];
+    char phone[10];
+
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===                    = =  Cadastra paciente = =                           ===\n");
     printf("===                                                                         ===\n");
-    printf("===                     Nome Completo:                                      ===\n");
-    printf("===                     CPF:                                                ===\n");
-    printf("===                     E-mail:                                             ===\n");
-    printf("===                     Número de contato:                                  ===\n");
+    printf("===                     Nome Completo:");
+    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",nome);
+    getchar();
+    printf("===                     CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                     E-mail:");
+    scanf("%[A-Za-z@._0-9]",email);
+    getchar();
+    printf("===                     Número de contato:");
+    scanf("%[0-9]",phone);
+    getchar();
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
@@ -76,12 +99,15 @@ void tela_paciente_cadastrar(void) {
 }
 
 void tela_paciente_buscar(void) {
+    char cpf[12];
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===                    = =  Busca paciente = =                              ===\n");
     printf("===                                                                         ===\n");
-    printf("===                      CPF:                                               ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
@@ -90,12 +116,15 @@ void tela_paciente_buscar(void) {
 }
 
 void tela_paciente_editar(void) {
+    char cpf[12];
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===                    = =  Editar paciente = =                             ===\n");
     printf("===                                                                         ===\n");
-    printf("===                      CPF:                                               ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
@@ -104,12 +133,15 @@ void tela_paciente_editar(void) {
 }
 
 void tela_paciente_excluir(void) {
+    char cpf[12];
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===                    = =  Exclui paciente = =                             ===\n");
     printf("===                                                                         ===\n");
-    printf("===                      CPF:                                               ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
@@ -138,7 +170,7 @@ void tela_sobre(void) {
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
-    printf("Aperte <ENTER> para");
+    printf("Aperte <ENTER> para continuar");
     getchar();    
 }
 
