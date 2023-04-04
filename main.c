@@ -14,6 +14,11 @@ void tela_funcionario_cadastrar(void);
 void tela_funcionario_buscar(void);
 void tela_funcionario_editar(void);
 void tela_funcionario_excluir(void);
+void tela_exame(void);
+void tela_exame_cadastrar(void);
+void tela_exame_buscar(void);
+void tela_exame_editar(void);
+void tela_exame_excluir(void);
 
 int main(void) {
   tela_sobre();
@@ -29,6 +34,11 @@ int main(void) {
   tela_funcionario_buscar();
   tela_funcionario_editar();
   tela_funcionario_excluir();
+  tela_exame();
+  tela_exame_cadastrar();
+  tela_exame_buscar();
+  tela_exame_editar();
+  tela_exame_excluir();
   return 0;
 
 }
@@ -253,6 +263,113 @@ void tela_funcionario_excluir(void) {
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
     printf("===                    = =  Exclui Fúncionario = =                          ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_exame(void) {
+    char op;
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = = Módulo exames = =                                ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     1. Cadastrar exame                                  ===\n");
+    printf("===                     2. Buscar exame                                     ===\n");
+    printf("===                     3. Editar exame                                     ===\n");
+    printf("===                     4. Excluir exame                                    ===\n");
+    printf("===                     0. Sair                                             ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     Escolha uma opção:");
+    scanf("%c",&op);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_exame_cadastrar(void) {
+    char horario[6];
+    char doutor[51];
+    char exame[51];
+    char phone[10];
+    char cpf[12];
+
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Cadastra Exames = =                             ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     Horario:");
+    scanf("%[0-9:]",horario);
+    getchar();
+    printf("===                     Doutor:");
+    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",doutor);
+    getchar();
+    printf("===                     Tipo de Exame:");
+    scanf("%[A-Za-z -0-9]",exame);
+    getchar();
+    printf("===                     Número de contato:");
+    scanf("%[0-9]",phone);
+    printf("===                      CPF do Paciente:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+ 
+ void tela_exame_buscar(void) {
+    char cpf[12];
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Busca Exame = =                                 ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+ void tela_exame_editar(void) {
+    char cpf[12];
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Edita Exame = =                                 ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+ void tela_exame_excluir(void) {
+    char cpf[12];
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Exclui Exame = =                                ===\n");
     printf("===                                                                         ===\n");
     printf("===                      CPF:");
     scanf("%[0-9]",cpf);
