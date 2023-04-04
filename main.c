@@ -9,6 +9,11 @@ void tela_paciente_cadastrar(void);
 void tela_paciente_buscar(void);
 void tela_paciente_editar(void);
 void tela_paciente_excluir(void);
+void tela_funcionario(void);
+void tela_funcionario_cadastrar(void);
+void tela_funcionario_buscar(void);
+void tela_funcionario_editar(void);
+void tela_funcionario_excluir(void);
 
 int main(void) {
   tela_sobre();
@@ -19,6 +24,11 @@ int main(void) {
   tela_paciente_buscar();
   tela_paciente_editar();
   tela_paciente_excluir();
+  tela_funcionario();
+  tela_funcionario_cadastrar();
+  tela_funcionario_buscar();
+  tela_funcionario_editar();
+  tela_funcionario_excluir();
   return 0;
 
 }
@@ -149,6 +159,111 @@ void tela_paciente_excluir(void) {
     getchar();
 
 }
+
+void tela_funcionario(void) {
+    char op;
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = = Módulo Fúncionarios = =                          ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     1. Cadastrar Fúncionario                            ===\n");
+    printf("===                     2. Buscar Fúncionario                               ===\n");
+    printf("===                     3. Editar Fúncionario                               ===\n");
+    printf("===                     4. Excluir Fúncionario                              ===\n");
+    printf("===                     0. Sair                                             ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     Escolha uma opção:");
+    scanf("%c",&op);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_funcionario_cadastrar(void) {
+    char nome[51];
+    char cpf[12];
+    char email[51];
+    char phone[10];
+
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Cadastra Fúncionarios = =                       ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                     Nome Completo:");
+    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",nome);
+    getchar();
+    printf("===                     CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                     E-mail:");
+    scanf("%[A-Za-z@._0-9]",email);
+    getchar();
+    printf("===                     Número de contato:");
+    scanf("%[0-9]",phone);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_funcionario_buscar(void) {
+    char cpf[12];
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Busca Fúncionario = =                           ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_funcionario_editar(void) {
+    char cpf[12];
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Edita Fúncionario = =                           ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
+void tela_funcionario_excluir(void) {
+    char cpf[12];
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                    = =  Exclui Fúncionario = =                          ===\n");
+    printf("===                                                                         ===\n");
+    printf("===                      CPF:");
+    scanf("%[0-9]",cpf);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+}
+
 
 void tela_sobre(void) {
     system("clear||cls");
