@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int tela_inicial(void);
+char tela_inicial(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -29,12 +29,27 @@ void tela_exame_editar(void);
 void tela_exame_excluir(void);
 
 int main(void) {
-modulo_paciente();
-modulo_medico();
-modulo_exame();
+  char opcao;
+
+  do {
+    opcao = tela_inicial();
+    switch(opcao) {
+        case '1': modulo_paciente();
+                  break;
+        case '2': modulo_medico();
+                  break;
+        case '3': modulo_exame();
+                  break;
+        case '4': tela_sobre();
+                  tela_equipe();
+                  break;
+    }
+  }while (opcao != '0');
+  
+  return 0;
 }
 
-int tela_inicial(void) {
+char tela_inicial(void) {
     char op;
     system("clear||cls");
     printf("===============================================================================\n");
