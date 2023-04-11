@@ -303,6 +303,23 @@ void tela_medico_excluir(void) {
     printf("Aperte <ENTER> para continuar");
     getchar();
 }
+void modulo_exame(){
+  char opcao;
+
+  do {
+    opcao = tela_exame();
+    switch(opcao) {
+        case '1': tela_exame_cadastrar();
+                  break;
+        case '2': tela_exame_buscar();
+                  break;
+        case '3': tela_exame_editar();
+                  break;
+        case '4': tela_exame_excluir();
+                  break;
+    }
+  }while (opcao != '0');
+} 
 
 char tela_exame(void) {
     char op;
@@ -325,11 +342,12 @@ char tela_exame(void) {
     printf("\n");
     printf("Aperte <ENTER> para continuar");
     getchar();
+    return op;
 }
 
 void tela_exame_cadastrar(void) {
     char horario[6];
-    char medico[51];
+    char medico[12];
     char exame[51];
     char cpf[12];
 
@@ -342,12 +360,12 @@ void tela_exame_cadastrar(void) {
     scanf("%[0-9:]",horario);
     getchar();
     printf("===                     CPF do medico:");
-    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",medico);
+    scanf("%[0-9]",medico);
     getchar();
     printf("===                     Tipo de Exame:");
     scanf("%[A-Za-z -]",exame);
     getchar();
-    printf("===                      CPF do Paciente:");
+    printf("===                     CPF do Paciente:");
     scanf("%[0-9]",cpf);
     getchar();
     printf("===                                                                         ===\n");
