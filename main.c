@@ -1,19 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-void tela_inicial(void);
+int tela_inicial(void);
 void tela_sobre(void);
 void tela_equipe(void);
-void tela_paciente(void);
+
+
+void modulo_paciente(void);
+char tela_paciente(void);
 void tela_paciente_cadastrar(void);
 void tela_paciente_buscar(void);
 void tela_paciente_editar(void);
 void tela_paciente_excluir(void);
+
 void tela_funcionario(void);
 void tela_funcionario_cadastrar(void);
 void tela_funcionario_buscar(void);
 void tela_funcionario_editar(void);
 void tela_funcionario_excluir(void);
+
 void tela_exame(void);
 void tela_exame_cadastrar(void);
 void tela_exame_buscar(void);
@@ -21,29 +27,10 @@ void tela_exame_editar(void);
 void tela_exame_excluir(void);
 
 int main(void) {
-  tela_sobre();
-  tela_equipe();
-  tela_inicial();
-  tela_paciente();
-  tela_paciente_cadastrar();
-  tela_paciente_buscar();
-  tela_paciente_editar();
-  tela_paciente_excluir();
-  tela_funcionario();
-  tela_funcionario_cadastrar();
-  tela_funcionario_buscar();
-  tela_funcionario_editar();
-  tela_funcionario_excluir();
-  tela_exame();
-  tela_exame_cadastrar();
-  tela_exame_buscar();
-  tela_exame_editar();
-  tela_exame_excluir();
-  return 0;
-
+modulo_paciente();
 }
 
-void tela_inicial(void) {
+int tela_inicial(void) {
     char op;
     system("clear||cls");
     printf("===============================================================================\n");
@@ -53,6 +40,7 @@ void tela_inicial(void) {
     printf("===            1. Módulo Paciente                                           ===\n");
     printf("===            2. Módulo Fúncionarios                                       ===\n");
     printf("===            3. Módulo Exames                                             ===\n");
+    printf("===            4. Tela sobre                                                ===\n");
     printf("===            0. Sair                                                      ===\n");
     printf("===                                                                         ===\n");
     printf("===            Escolha uma opção:");
@@ -63,9 +51,27 @@ void tela_inicial(void) {
     printf("\n");
     printf("Aperte <ENTER> para continuar");
     getchar();
+    return op;
 }
 
-void tela_paciente(void) {
+void modulo_paciente(void) {
+    char opcao;
+    do{
+        opcao = tela_paciente();
+        switch(opcao){
+            case '1': tela_paciente_cadastrar();
+                      break;
+            case '2': tela_paciente_buscar();
+                      break;
+            case '3': tela_paciente_editar();
+                      break;
+            case '4': tela_paciente_excluir();
+                      break;
+        }
+    }while (opcao != '0');
+}
+
+char tela_paciente(void) {
     char op;
     system("clear||cls");
     printf("===============================================================================\n");
@@ -86,6 +92,7 @@ void tela_paciente(void) {
     printf("\n");
     printf("Aperte <ENTER> para continuar");
     getchar();
+    return op;
 }
 
 void tela_paciente_cadastrar(void) {
