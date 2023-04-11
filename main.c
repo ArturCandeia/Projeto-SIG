@@ -14,13 +14,15 @@ void tela_paciente_buscar(void);
 void tela_paciente_editar(void);
 void tela_paciente_excluir(void);
 
-void tela_funcionario(void);
-void tela_funcionario_cadastrar(void);
-void tela_funcionario_buscar(void);
-void tela_funcionario_editar(void);
-void tela_funcionario_excluir(void);
+void modulo_medico(void);
+char tela_medico(void);
+void tela_medico_cadastrar(void);
+void tela_medico_buscar(void);
+void tela_medico_editar(void);
+void tela_medico_excluir(void);
 
-void tela_exame(void);
+void modulo_exame(void);
+char tela_exame(void);
 void tela_exame_cadastrar(void);
 void tela_exame_buscar(void);
 void tela_exame_editar(void);
@@ -28,6 +30,8 @@ void tela_exame_excluir(void);
 
 int main(void) {
 modulo_paciente();
+modulo_medico();
+modulo_exame();
 }
 
 int tela_inicial(void) {
@@ -177,17 +181,35 @@ void tela_paciente_excluir(void) {
 
 }
 
-void tela_funcionario(void) {
+void modulo_medico(){
+  char opcao;
+
+  do {
+    opcao = tela_medico();
+    switch(opcao) {
+        case '1': tela_medico_cadastrar();
+                  break;
+        case '2': tela_medico_buscar();
+                  break;
+        case '3': tela_medico_editar();
+                  break;
+        case '4': tela_medico_excluir();
+                  break;
+    }
+  }while (opcao != '0');
+} 
+
+char tela_medico(void) {
     char op;
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
-    printf("===                    = = Módulo Fúncionarios = =                          ===\n");
+    printf("===                    = = Módulo Médicos = =                               ===\n");
     printf("===                                                                         ===\n");
-    printf("===                     1. Cadastrar Fúncionario                            ===\n");
-    printf("===                     2. Buscar Fúncionario                               ===\n");
-    printf("===                     3. Editar Fúncionario                               ===\n");
-    printf("===                     4. Excluir Fúncionario                              ===\n");
+    printf("===                     1. Cadastrar médico                                 ===\n");
+    printf("===                     2. Buscar médico                                    ===\n");
+    printf("===                     3. Editar médico                                    ===\n");
+    printf("===                     4. Excluir médico                                   ===\n");
     printf("===                     0. Sair                                             ===\n");
     printf("===                                                                         ===\n");
     printf("===                     Escolha uma opção:");
@@ -198,9 +220,10 @@ void tela_funcionario(void) {
     printf("\n");
     printf("Aperte <ENTER> para continuar");
     getchar();
+    return op;
 }
 
-void tela_funcionario_cadastrar(void) {
+void tela_medico_cadastrar(void) {
     char nome[51];
     char cpf[12];
     char email[51];
@@ -209,7 +232,7 @@ void tela_funcionario_cadastrar(void) {
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
-    printf("===                    = =  Cadastra Fúncionarios = =                       ===\n");
+    printf("===                    = =  Cadastra Médicos = =                            ===\n");
     printf("===                                                                         ===\n");
     printf("===                     Nome Completo:");
     scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",nome);
@@ -230,12 +253,12 @@ void tela_funcionario_cadastrar(void) {
     getchar();
 }
 
-void tela_funcionario_buscar(void) {
+void tela_medico_buscar(void) {
     char cpf[12];
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
-    printf("===                    = =  Busca Fúncionario = =                           ===\n");
+    printf("===                    = =  Busca Médico = =                                ===\n");
     printf("===                                                                         ===\n");
     printf("===                      CPF:");
     scanf("%[0-9]",cpf);
@@ -247,12 +270,12 @@ void tela_funcionario_buscar(void) {
     getchar();
 }
 
-void tela_funcionario_editar(void) {
+void tela_medico_editar(void) {
     char cpf[12];
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
-    printf("===                    = =  Edita Fúncionario = =                           ===\n");
+    printf("===                    = =  Edita Médico = =                                ===\n");
     printf("===                                                                         ===\n");
     printf("===                      CPF:");
     scanf("%[0-9]",cpf);
@@ -264,12 +287,12 @@ void tela_funcionario_editar(void) {
     getchar();
 }
 
-void tela_funcionario_excluir(void) {
+void tela_medico_excluir(void) {
     char cpf[12];
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
-    printf("===                    = =  Exclui Fúncionario = =                          ===\n");
+    printf("===                    = =  Exclui Médico = =                               ===\n");
     printf("===                                                                         ===\n");
     printf("===                      CPF:");
     scanf("%[0-9]",cpf);
@@ -281,7 +304,7 @@ void tela_funcionario_excluir(void) {
     getchar();
 }
 
-void tela_exame(void) {
+char tela_exame(void) {
     char op;
     system("clear||cls");
     printf("===============================================================================\n");
@@ -306,9 +329,8 @@ void tela_exame(void) {
 
 void tela_exame_cadastrar(void) {
     char horario[6];
-    char doutor[51];
+    char medico[51];
     char exame[51];
-    char phone[10];
     char cpf[12];
 
     system("clear||cls");
@@ -319,17 +341,14 @@ void tela_exame_cadastrar(void) {
     printf("===                     Horario:");
     scanf("%[0-9:]",horario);
     getchar();
-    printf("===                     Doutor:");
-    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",doutor);
+    printf("===                     CPF do medico:");
+    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",medico);
     getchar();
     printf("===                     Tipo de Exame:");
-    scanf("%[A-Za-z -0-9]",exame);
+    scanf("%[A-Za-z -]",exame);
     getchar();
-    printf("===                     Número de contato:");
-    scanf("%[0-9]",phone);
     printf("===                      CPF do Paciente:");
     scanf("%[0-9]",cpf);
-    getchar();
     getchar();
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
