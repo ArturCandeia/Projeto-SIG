@@ -1,4 +1,4 @@
-//Assinaturas tela paciente
+//Assinaturas Módulo paciente
 
 void modulo_paciente(void);
 char tela_paciente(void);
