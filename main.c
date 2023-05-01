@@ -6,14 +6,6 @@ char tela_inicial(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
-
-void modulo_paciente(void);
-char tela_paciente(void);
-void tela_paciente_cadastrar(void);
-void tela_paciente_buscar(void);
-void tela_paciente_editar(void);
-void tela_paciente_excluir(void);
-
 void modulo_medico(void);
 char tela_medico(void);
 void tela_medico_cadastrar(void);
