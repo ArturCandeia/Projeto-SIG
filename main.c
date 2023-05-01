@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "paciente.h"
 
 char tela_inicial(void);
 void tela_sobre(void);
