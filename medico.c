@@ -3,9 +3,18 @@
 #include <unistd.h>
 #include "medico.h"
 
+typedef struct medico Medico;
+struct medico{
+    char crm[10];
+    char nome[51];
+    char email[51];
+    char phone[10];
+    int status;
+};
+
 void modulo_medico(){
   char opcao;
-
+  
   do {
     opcao = tela_medico();
     switch(opcao) {
@@ -47,7 +56,7 @@ char tela_medico(void) {
 
 void tela_medico_cadastrar(void) {
     char nome[51];
-    char cpf[12];
+    char crm[10];
     char email[51];
     char phone[10];
 
@@ -60,7 +69,7 @@ void tela_medico_cadastrar(void) {
     scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",nome);
     getchar();
     printf("===                     CPF:");
-    scanf("%[0-9]",cpf);
+    scanf("%[0-9]",crm);
     getchar();
     printf("===                     E-mail:");
     scanf("%[A-Za-z@._0-9]",email);

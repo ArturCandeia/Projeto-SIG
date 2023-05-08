@@ -3,6 +3,15 @@
 #include <unistd.h>
 #include "exame.h"
 
+typedef struct exame Exame;
+struct exame {
+  int id_exame;
+  char crm[10];
+  char cpf[12];
+  char datahora[15];
+  int status;
+};
+
 void modulo_exame(){
   char opcao;
 
@@ -47,8 +56,8 @@ char tela_exame(void) {
 
 void tela_exame_cadastrar(void) {
     char horario[6];
-    char medico[12];
-    char exame[51];
+    char crm[10];
+    char id_exame[10];
     char cpf[12];
 
     system("clear||cls");
@@ -59,11 +68,11 @@ void tela_exame_cadastrar(void) {
     printf("===                     Horario:");
     scanf("%[0-9:]",horario);
     getchar();
-    printf("===                     CPF do medico:");
-    scanf("%[0-9]",medico);
+    printf("===                     CRM do medico:");
+    scanf("%[0-9]",crm);
     getchar();
     printf("===                     Tipo de Exame:");
-    scanf("%[A-Za-z -]",exame);
+    scanf("%[A-Za-z -]",id_exame);
     getchar();
     printf("===                     CPF do Paciente:");
     scanf("%[0-9]",cpf);
