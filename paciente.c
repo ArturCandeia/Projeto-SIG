@@ -9,6 +9,7 @@ struct paciente{
     char nome[51];
     char email[51];
     char phone[10];
+    int status;
 };
 
 void modulo_paciente(void) {
