@@ -1,5 +1,15 @@
 //Assinaturas Módulo paciente
 
+typedef struct paciente Paciente;
+struct paciente{
+    char cpf[12];
+    char nome[51];
+    char email[51];
+    char phone[10];
+    int status;
+};
+
+
 void modulo_paciente(void);
 char tela_paciente(void);
 void tela_paciente_cadastrar(void);

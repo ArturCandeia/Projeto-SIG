@@ -3,15 +3,6 @@
 #include <unistd.h>
 #include "paciente.h"
 
-typedef struct paciente Paciente;
-struct paciente{
-    char cpf[12];
-    char nome[51];
-    char email[51];
-    char phone[10];
-    int status;
-};
-
 void modulo_paciente(void) {
     char opcao;
     do{
