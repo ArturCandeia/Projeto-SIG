@@ -3,15 +3,6 @@
 #include <unistd.h>
 #include "exame.h"
 
-typedef struct exame Exame;
-struct exame {
-  int id_exame;
-  char crm[10];
-  char cpf[12];
-  char datahora[15];
-  int status;
-};
-
 void modulo_exame(){
   char opcao;
 
