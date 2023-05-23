@@ -2,7 +2,7 @@
 
 typedef struct exame Exame;
 struct exame {
-  int id_exame;
+  char id_exame[12];
   char crm[10];
   char cpf[12];
   char horario[6];
