@@ -73,6 +73,7 @@ Exame* tela_exame_cadastrar(void) {
     printf("\n");
     printf("Aperte <ENTER> para continuar");
     getchar();
+    return(exa);
 }
  
  void tela_exame_buscar(void) {
