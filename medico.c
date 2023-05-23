@@ -16,7 +16,7 @@ void modulo_medico(){
                   break;
         case '3': medico_editar();
                   break;
-        case '4': tela_medico_excluir();
+        case '4': medico_excluir();
                   break;
     }
   }while (opcao != '0');
@@ -29,7 +29,7 @@ void medico_cadastrar(void){
     free(med);
 }
 
-void buscar_medico(void){
+void medico_buscar(void){
     tela_medico_buscar();
 }
 
@@ -94,6 +94,7 @@ Medico *tela_medico_cadastrar(void) {
     printf("\n");
     printf("Aperte <ENTER> para continuar");
     getchar();
+    return(med);
 }
 
 void tela_medico_buscar(void) {
