@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 #include "paciente.h"
 #include "medico.h"
 #include "exame.h"
@@ -38,7 +39,7 @@ char tela_inicial(void) {
     printf("===           = = Sistema de Gerenciamento Clinico = =                      ===\n");
     printf("===                                                                         ===\n");
     printf("===            1. Módulo Paciente                                           ===\n");
-    printf("===            2. Módulo Fúncionarios                                       ===\n");
+    printf("===            2. Módulo Medico                                             ===\n");
     printf("===            3. Módulo Exames                                             ===\n");
     printf("===            4. Tela sobre                                                ===\n");
     printf("===            0. Sair                                                      ===\n");

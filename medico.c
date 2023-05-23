@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 #include "medico.h"
 
 void modulo_medico(){
@@ -22,7 +23,9 @@ void modulo_medico(){
 } 
 
 char tela_medico(void) {
+
     char op;
+
     system("clear||cls");
     printf("===============================================================================\n");
     printf("===                                                                         ===\n");
@@ -45,11 +48,10 @@ char tela_medico(void) {
     return op;
 }
 
-void tela_medico_cadastrar(void) {
-    char nome[51];
-    char crm[10];
-    char email[51];
-    char phone[10];
+Medico *tela_medico_cadastrar(void) {
+
+    Medico *med;
+     med = (Medico*) malloc(sizeof(Medico));
 
     system("clear||cls");
     printf("===============================================================================\n");
@@ -57,17 +59,18 @@ void tela_medico_cadastrar(void) {
     printf("===                    = =  Cadastra Médicos = =                            ===\n");
     printf("===                                                                         ===\n");
     printf("===                     Nome Completo:");
-    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",nome);
+    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",med->nome);
     getchar();
     printf("===                     CPF:");
-    scanf("%[0-9]",crm);
+    scanf("%[0-9]",med->crm);
     getchar();
     printf("===                     E-mail:");
-    scanf("%[A-Za-z@._0-9]",email);
+    scanf("%[A-Za-z@._0-9]",med->email);
     getchar();
     printf("===                     Número de contato:");
-    scanf("%[0-9]",phone);
+    scanf("%[0-9]",med->phone);
     getchar();
+    free(med);
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
