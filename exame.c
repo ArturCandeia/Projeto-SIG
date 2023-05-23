@@ -45,11 +45,10 @@ char tela_exame(void) {
     return op;
 }
 
-void tela_exame_cadastrar(void) {
-    char horario[6];
-    char crm[10];
-    char id_exame[10];
-    char cpf[12];
+Exame* tela_exame_cadastrar(void) {
+  Exame *exa;
+   exa =(Exame*) malloc(sizeof(Exame));
+
 
     system("clear||cls");
     printf("===============================================================================\n");
@@ -57,17 +56,18 @@ void tela_exame_cadastrar(void) {
     printf("===                    = =  Cadastra Exames = =                             ===\n");
     printf("===                                                                         ===\n");
     printf("===                     Horario:");
-    scanf("%[0-9:]",horario);
+    scanf("%[0-9:]",exa->horario);
     getchar();
     printf("===                     CRM do medico:");
-    scanf("%[0-9]",crm);
+    scanf("%[0-9]",exa->crm);
     getchar();
     printf("===                     Tipo de Exame:");
-    scanf("%[A-Za-z -]",id_exame);
+    scanf("%[A-Za-z -]",exa->id_exame);
     getchar();
     printf("===                     CPF do Paciente:");
-    scanf("%[0-9]",cpf);
+    scanf("%[0-9]",exa->cpf);
     getchar();
+    free(exa);
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
