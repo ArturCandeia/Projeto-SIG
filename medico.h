@@ -15,3 +15,7 @@ Medico *tela_medico_cadastrar(void);
 void tela_medico_buscar(void);
 void tela_medico_editar(void);
 void tela_medico_excluir(void);
+void medico_cadastrar(void);
+void medico_buscar(void);
+void medico_editar(void);
+void medico_excluir(void);

@@ -10,17 +10,36 @@ void modulo_medico(){
   do {
     opcao = tela_medico();
     switch(opcao) {
-        case '1': tela_medico_cadastrar();
+        case '1': medico_cadastrar();
                   break;
-        case '2': tela_medico_buscar();
+        case '2': medico_buscar();
                   break;
-        case '3': tela_medico_editar();
+        case '3': medico_editar();
                   break;
         case '4': tela_medico_excluir();
                   break;
     }
   }while (opcao != '0');
 } 
+
+void medico_cadastrar(void){
+    Medico *med;
+    med = tela_medico_cadastrar();
+
+    free(med);
+}
+
+void buscar_medico(void){
+    tela_medico_buscar();
+}
+
+void medico_editar(){
+    tela_medico_editar();
+}
+
+void medico_excluir(){
+    tela_medico_excluir();
+}
 
 char tela_medico(void) {
 
@@ -70,7 +89,6 @@ Medico *tela_medico_cadastrar(void) {
     printf("===                     Número de contato:");
     scanf("%[0-9]",med->phone);
     getchar();
-    free(med);
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
