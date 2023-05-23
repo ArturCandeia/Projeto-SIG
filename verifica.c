@@ -96,4 +96,3 @@ int validarNome(char* nome) {
     }
     return 1;
 }
-
