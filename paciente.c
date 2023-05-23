@@ -44,11 +44,9 @@ char tela_paciente(void) {
     return op;
 }
 
-void tela_paciente_cadastrar(void) {
-    char nome[51];
-    char cpf[12];
-    char email[51];
-    char phone[10];
+Paciente* tela_paciente_cadastrar(void) {
+    Paciente *pac;
+     pac = (Paciente*) malloc(sizeof(Paciente));
 
     system("clear||cls");
     printf("===============================================================================\n");
@@ -56,17 +54,18 @@ void tela_paciente_cadastrar(void) {
     printf("===                    = =  Cadastra paciente = =                           ===\n");
     printf("===                                                                         ===\n");
     printf("===                     Nome Completo:");
-    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",nome);
+    scanf("%[A-ZÁÃÂÉẼÊÍĨÎÓÕÔ a-záãâéẽêíĩîóõô]",pac->nome);
     getchar();
     printf("===                     CPF:");
-    scanf("%[0-9]",cpf);
+    scanf("%[0-9]",pac->cpf);
     getchar();
     printf("===                     E-mail:");
-    scanf("%[A-Za-z@._0-9]",email);
+    scanf("%[A-Za-z@._0-9]",pac->email);
     getchar();
     printf("===                     Número de contato:");
-    scanf("%[0-9]",phone);
+    scanf("%[0-9]",pac->phone);
     getchar();
+    free(pac);
     printf("===                                                                         ===\n");
     printf("===============================================================================\n");
     printf("\n");
