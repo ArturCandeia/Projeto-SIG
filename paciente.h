@@ -25,3 +25,4 @@ void regravar_paciente(Paciente*);
 void paciente_buscar(void);
 void paciente_editar(void);
 void paciente_excluir(void);
+void lista_pacientes(void);

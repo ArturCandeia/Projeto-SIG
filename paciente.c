@@ -18,6 +18,8 @@ void modulo_paciente(void) {
                       break;
             case '4': paciente_excluir();
                       break;
+            case '5': lista_pacientes();
+                      break;          
         }
     }while (opcao != '0');
 }
@@ -87,6 +89,7 @@ char tela_paciente(void) {
     printf("===                     2. Buscar Paciente                                  ===\n");
     printf("===                     3. Editar Paciente                                  ===\n");
     printf("===                     4. Excluir Paciente                                 ===\n");
+    printf("===                     5. Listagem de Pacientes                            ===\n");
     printf("===                     0. Sair                                             ===\n");
     printf("===                                                                         ===\n");
     printf("===                     Escolha uma opção:");
@@ -265,4 +268,24 @@ void regravar_paciente(Paciente* pac) {
     }
     fclose(fp);
     free(pacVisto);
+}
+
+void lista_pacientes(void){
+    FILE *fp;
+    Paciente* pac;
+
+    pac = (Paciente*) malloc(sizeof(Paciente));
+    fp = fopen("paciente.dat","rb");
+    while (fread(pac,sizeof(Paciente),1,fp)) {
+        printf("\n =Dados do Paciente= \n\n");
+        printf("Nome: %s\n", pac->nome);
+        printf("CPF: %s\n", pac->cpf);
+        printf("email: %s\n", pac->email);
+        printf("Telefone: %s\n", pac->phone);
+        printf("status %d\n\n", pac->status);
+    }
+    printf("Aperte ENTER para continuar \n");
+    getchar();
+    fclose(fp);
+    free(pac);
 }
