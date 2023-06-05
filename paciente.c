@@ -254,7 +254,7 @@ void regravar_paciente(Paciente* pac) {
     Paciente* pacVisto;
 
     pacVisto = (Paciente*) malloc(sizeof(Paciente));
-    fp = fopen("Paciente.dat","r+b");
+    fp = fopen("paciente.dat","r+b");
     if(fp == NULL) {
         tela_error();
     }
