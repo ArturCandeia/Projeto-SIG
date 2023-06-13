@@ -17,9 +17,7 @@ void modulo_paciente(void) {
             case '3': paciente_editar();
                       break;
             case '4': paciente_excluir();
-                      break;
-            case '5': lista_pacientes();
-                      break;          
+                      break;        
         }
     }while (opcao != '0');
 }
