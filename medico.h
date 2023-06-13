@@ -24,3 +24,4 @@ void gravar_medico(Medico*);
 void regravar_medico(Medico*);
 void exibe_medico(Medico*);
 void tela_error_medico(void);
+void lista_medicos(void);
