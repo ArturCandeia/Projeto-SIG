@@ -12,7 +12,17 @@ struct exame {
 
 void modulo_exame(void);
 char tela_exame(void);
-Exame* tela_exame_cadastrar(void);
-void tela_exame_buscar(void);
-void tela_exame_editar(void);
-void tela_exame_excluir(void);
+Exame *tela_exame_cadastrar(void);
+char* tela_exame_buscar(void);
+char* tela_exame_editar(void);
+char* tela_exame_excluir(void);
+Exame* achar_exame(char*);
+void exame_cadastrar(void);
+void exame_buscar(void);
+void exame_editar(void);
+void exame_excluir(void);
+void gravar_exame(Exame*);
+void regravar_exame(Exame*);
+void exibe_exame(Exame*);
+void tela_error_exame(void);
+void lista_exames(void);
