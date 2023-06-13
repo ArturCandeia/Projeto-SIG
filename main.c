@@ -7,8 +7,10 @@
 #include "exame.h"
 
 char tela_inicial(void);
+char tela_lista(void);
 void tela_sobre(void);
 void tela_equipe(void);
+int lista(void);
 
 int main(void) {
   char opcao;
@@ -24,6 +26,8 @@ int main(void) {
                   break;
         case '4': tela_sobre();
                   tela_equipe();
+                  break;
+        case '5':lista();
                   break;
     }
   }while (opcao != '0');
@@ -42,6 +46,7 @@ char tela_inicial(void) {
     printf("===            2. Módulo Medico                                             ===\n");
     printf("===            3. Módulo Exames                                             ===\n");
     printf("===            4. Tela sobre                                                ===\n");
+    printf("===            5. Listagens                                                 ===\n");
     printf("===            0. Sair                                                      ===\n");
     printf("===                                                                         ===\n");
     printf("===            Escolha uma opção:");
@@ -97,4 +102,43 @@ void tela_equipe(void) {
     getchar();
 }
 
+char tela_lista(void){
+    char op;
+    system("clear||cls");
+    printf("===============================================================================\n");
+    printf("===                                                                         ===\n");
+    printf("===                         = = Listagem = =                                ===\n");
+    printf("===                                                                         ===\n");
+    printf("===            1. Listagem Exames                                           ===\n");
+    printf("===            2. Listagem Medicos                                          ===\n");
+    printf("===            3. Listagem Pacientes                                        ===\n");
+    printf("===            0. Sair                                                      ===\n");
+    printf("===                                                                         ===\n");
+    printf("===            Escolha uma opção:");
+    scanf("%c",&op);
+    getchar();
+    printf("===                                                                         ===\n");
+    printf("===============================================================================\n");
+    printf("\n");
+    printf("Aperte <ENTER> para continuar");
+    getchar();
+    return op;
+}
 
+int lista(void) {
+  char opcao;
+
+  do {
+    opcao = tela_lista();
+    switch(opcao) {
+        case '1': lista_exames();
+                  break;
+        case '2': lista_medicos();
+                  break;
+        case '3': lista_pacientes();
+                  break;
+    }
+  }while (opcao != '0');
+  
+  return 0;
+}
