@@ -288,3 +288,29 @@ void lista_exames(void){
     fclose(fp);
     free(exa);
 }
+
+void lista_exame_crm(void){
+    char crm[10];
+    FILE *fp;
+    Exame* exa;
+    exa = (Exame*) malloc(sizeof(Exame));
+    fp = fopen("exame.dat","rb");
+    printf("Digite o crm de um medico:");
+    scanf("%s",crm);
+    while (fread(exa,sizeof(Exame),1,fp)) {
+        if(strcmp(exa->crm,crm)== 0){
+            system("clear||cls");
+            printf("=Dados do Exame= \n");
+            printf("id exame: %s\n", exa->id_exame);
+            printf("cpf: %s\n", exa->cpf);
+            printf("crm: %s\n", exa->crm);
+            printf("data e hora: %s\n", exa->datahora);
+            printf("status %d\n", exa->status);
+            getchar();
+        }
+    }
+    printf("Aperte ENTER para continuar \n");
+    getchar();
+    fclose(fp);
+    free(exa);
+}

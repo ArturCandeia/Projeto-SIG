@@ -26,3 +26,4 @@ void regravar_exame(Exame*);
 void exibe_exame(Exame*);
 void tela_error_exame(void);
 void lista_exames(void);
+void lista_exame_crm(void);

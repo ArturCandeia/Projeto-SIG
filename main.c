@@ -110,8 +110,9 @@ char tela_lista(void){
     printf("===                         = = Listagem = =                                ===\n");
     printf("===                                                                         ===\n");
     printf("===            1. Listagem Exames                                           ===\n");
-    printf("===            2. Listagem Medicos                                          ===\n");
-    printf("===            3. Listagem Pacientes                                        ===\n");
+    printf("===            2. Listagem Exames(Por crm)                                  ===\n");
+    printf("===            3. Listagem Medicos                                          ===\n");
+    printf("===            4. Listagem Pacientes                                        ===\n");
     printf("===            0. Sair                                                      ===\n");
     printf("===                                                                         ===\n");
     printf("===            Escolha uma opção:");
@@ -133,9 +134,11 @@ int lista(void) {
     switch(opcao) {
         case '1': lista_exames();
                   break;
-        case '2': lista_medicos();
+        case '2': lista_exame_crm();
+                  break;  
+        case '3': lista_medicos();
                   break;
-        case '3': lista_pacientes();
+        case '4': lista_pacientes();
                   break;
     }
   }while (opcao != '0');
