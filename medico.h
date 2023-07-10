@@ -5,7 +5,7 @@ struct medico{
     char crm[10];
     char nome[51];
     char email[51];
-    char phone[10];
+    char phone[12];
     int status;
 };
 
