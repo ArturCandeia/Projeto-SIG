@@ -87,7 +87,6 @@ char tela_paciente(void) {
     printf("===                     2. Buscar Paciente                                  ===\n");
     printf("===                     3. Editar Paciente                                  ===\n");
     printf("===                     4. Excluir Paciente                                 ===\n");
-    printf("===                     5. Listagem de Pacientes                            ===\n");
     printf("===                     0. Sair                                             ===\n");
     printf("===                                                                         ===\n");
     printf("===                     Escolha uma opção:");
