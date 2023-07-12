@@ -53,7 +53,7 @@ void paciente_editar(void) {
     } else {
         pac = tela_paciente_cadastrar();
         strcpy(pac->cpf, cpf);
-        regravar_paciente(pac);
+        editar_paciente(pac);
         free(pac);
     }
     free(cpf);
@@ -70,7 +70,7 @@ void paciente_excluir(void) {
         printf("Paciente inexistente \n");
     } else { 
         pac->status = 0;
-        regravar_paciente(pac);
+        editar_paciente(pac);
         free(pac);
     }
     free(cpf);
@@ -245,7 +245,7 @@ void exibe_paciente(Paciente *pac) {
     getchar();
 }
 
-void regravar_paciente(Paciente* pac) {
+void editar_paciente(Paciente* pac) {
     int encontrado;
     FILE* fp;
     Paciente* pacVisto;
@@ -260,7 +260,7 @@ void regravar_paciente(Paciente* pac) {
         if (strcmp(pacVisto->cpf, pac->cpf)==0){
             encontrado = True;
             fseek(fp, -1*sizeof(Paciente), SEEK_CUR);
-        fwrite(pac, sizeof(Paciente), 1, fp);
+            fwrite(pac, sizeof(Paciente), 1, fp);
         }
     }
     fclose(fp);

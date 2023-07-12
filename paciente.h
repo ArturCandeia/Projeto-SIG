@@ -21,7 +21,7 @@ void paciente_cadastrar(void);
 void gravar_paciente(Paciente*);
 Paciente* achar_paciente(char*);
 void exibe_paciente(Paciente*);
-void regravar_paciente(Paciente*);
+void editar_paciente(Paciente*);
 void paciente_buscar(void);
 void paciente_editar(void);
 void paciente_excluir(void);
